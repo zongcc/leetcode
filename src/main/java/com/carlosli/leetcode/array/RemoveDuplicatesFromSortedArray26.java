@@ -28,6 +28,14 @@ public class RemoveDuplicatesFromSortedArray26 {
         return duplicatePoint == 0 ? nums.length : duplicatePoint; // 防止nums没有重复的数据
     }
 
+    /**
+     * 思路
+     * 2个指针，一个用于写，一个用于读。
+     * 因为所有的都不同，只能有一个数字，只有在遇到不同的时候，写的指针才移动，这样保证留下一个数字
+     *
+     * @param nums
+     * @return
+     */
     public int removeDuplicates2(int[] nums) {
         int i = 0;
         int j = 0;
