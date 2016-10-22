@@ -37,7 +37,7 @@ public class ContainsDuplicate217 {
 
 
     public static void main(String[] args) {
-        // ×îºóÒ»¸öÖØ¸´
+        // æœ€åä¸€ä¸ªé‡å¤
         int[] nums = new int[30001];
         for (int i = 0; i < nums.length - 1; i++) {
             nums[i] = i + 1;

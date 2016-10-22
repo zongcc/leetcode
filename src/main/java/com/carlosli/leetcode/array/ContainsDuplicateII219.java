@@ -28,7 +28,7 @@ public class ContainsDuplicateII219 {
     }
 
     public static boolean containsNearbyDuplicate3(int[] nums, int k) {
-        // numsµÄÖµ ×ökey index×övalue
+        // numsçš„å€¼ åškey indexåšvalue
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for (int index = 0; index < nums.length; index++) {
             Integer preIndex = map.get(nums[index]);
@@ -36,10 +36,10 @@ public class ContainsDuplicateII219 {
                 return true;
             } else {
                 /*
-                 Óöµ½==null »òÕß£¡=nullÁ½ÖÖÇé¿ö
-                     1. ==null  ·Å
-                     2. !=null  Ò²Òª·Å£¬½«indexË¢ĞÂÎª×îĞÂµÄ£¬ÒòÎªÊÇ°´ÕÕË³Ğò±éÀú£¬×îĞÂµÄ¸úºóÃæ±È½ÏÊ±£¬¿Ï¶¨±ÈÇ°ÃæµÄindex½ü£¬
-                                Ö»Òª¾àÀë×î½üµÄĞ¡ÓÚk£¬¼´¿É
+                 é‡åˆ°==null æˆ–è€…ï¼=nullä¸¤ç§æƒ…å†µ
+                     1. ==null  æ”¾
+                     2. !=null  ä¹Ÿè¦æ”¾ï¼Œå°†indexåˆ·æ–°ä¸ºæœ€æ–°çš„ï¼Œå› ä¸ºæ˜¯æŒ‰ç…§é¡ºåºéå†ï¼Œæœ€æ–°çš„è·Ÿåé¢æ¯”è¾ƒæ—¶ï¼Œè‚¯å®šæ¯”å‰é¢çš„indexè¿‘ï¼Œ
+                                åªè¦è·ç¦»æœ€è¿‘çš„å°äºkï¼Œå³å¯
                 */
                 map.put(nums[index], index);
             }
@@ -50,9 +50,9 @@ public class ContainsDuplicateII219 {
     public static boolean containsNearbyDuplicate4(int[] nums, int k) {
         Set<Integer> set = new HashSet<Integer>();
         for (int i = 0; i < nums.length; i++) {
-            // É¾³ıÒÑ¾­³¬¹ı¾àÀëkµÄÔªËØ
+            // åˆ é™¤å·²ç»è¶…è¿‡è·ç¦»kçš„å…ƒç´ 
             if (i > k) set.remove(nums[i - k - 1]);
-            // set´æµÄÊ±ºò ÈôsetÖĞÒÑ¾­´æÔÚ¸ÃÖµ£¬Ôò·µ»Ø·Ç¿Õ£¬ÄÇÃ´¾ÍËµÃ÷ÓĞ·ûºÏÒªÇóµÄ
+            // setå­˜çš„æ—¶å€™ è‹¥setä¸­å·²ç»å­˜åœ¨è¯¥å€¼ï¼Œåˆ™è¿”å›éç©ºï¼Œé‚£ä¹ˆå°±è¯´æ˜æœ‰ç¬¦åˆè¦æ±‚çš„
             if (!set.add(nums[i])) return true;
         }
         return false;
@@ -60,7 +60,7 @@ public class ContainsDuplicateII219 {
 
 
     public static void main(String[] args) {
-        // ×îºóÒ»¸öÖØ¸´
+        // æœ€åä¸€ä¸ªé‡å¤
         int[] nums = new int[10001];
         for (int i = 0; i < nums.length - 1; i++) {
             nums[i] = i + 1;
@@ -68,7 +68,7 @@ public class ContainsDuplicateII219 {
         nums[10000] = 9990;
 
         /*
-        * ¼¸¸öÌØÊâÇé¿öÒª¿¼ÂÇ
+        * å‡ ä¸ªç‰¹æ®Šæƒ…å†µè¦è€ƒè™‘
         * []        0
         * [99,99]   1
         * [1,2]     1
