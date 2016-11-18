@@ -131,9 +131,6 @@ public class RemoveNthNodeFromEndofList19 {
 
         ListNode listNode = RemoveNthNodeFromEndofList19.removeNthFromEnd3(node1, 1);
 
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
+        ListNode.printList(listNode);
     }
 }
