@@ -60,6 +60,12 @@ public class IntersectionofTwoLinkedLists160 {
         假设 两个长度为6、8
         此方法会走两遍   两条路的总长度都为 14，只不过一个是6+8，另一个是8+6
         两遍后都会同时走到最后的结尾，所以若有相同，必会相遇
+           ---3--
+                 ---3----
+        ------5--
+        第一条路 3+3+5 = 12
+        第二条路 5+3+3 = 12
+        必会在重合的地方相遇
      */
     public static ListNode getIntersectionNode3(ListNode headA, ListNode headB) {
         // 边界检测
