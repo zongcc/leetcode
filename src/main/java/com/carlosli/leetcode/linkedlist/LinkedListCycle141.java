@@ -51,7 +51,8 @@ public class LinkedListCycle141 {
         if (head.next == head) return true;
         ListNode nextNode = head.next;
         // 下面的有啥用，但是去掉后  Exception in thread "main" java.lang.StackOverflowError
-        // 等到下次转到这个head的时候就是，就可以判断出有圈了
+        // 1.等到下次转到这个head的时候就是，就可以判断出有圈了
+        // 2.异常是因为，若没有，会成行圈，会一直递归调用下去
         head.next = head;
         boolean isCycle = hasCycle2(nextNode);
         return isCycle;
