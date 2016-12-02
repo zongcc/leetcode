@@ -63,6 +63,7 @@ public class ReverseLinkedList206 {
      */
     public static ListNode reverseList3(ListNode head) {
         if (head == null || head.next == null) return head;
+        // 这个p是为了能传递回最后的元素作为新的第一个元素
         ListNode p = reverseList3(head.next);
         head.next.next = head;
         head.next = null;
