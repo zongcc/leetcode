@@ -12,8 +12,10 @@ class ListNode {
 
     public static void printList(ListNode listNode) {
         while (listNode != null) {
-            System.out.println(listNode.val);
+            System.out.print(listNode.val);
             listNode = listNode.next;
+            if (listNode != null) System.out.print(" - ");
         }
+        System.out.println("");
     }
 }
