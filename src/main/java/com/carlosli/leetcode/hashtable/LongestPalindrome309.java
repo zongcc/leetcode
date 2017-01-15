@@ -81,6 +81,17 @@ public class LongestPalindrome309 {
 
     }
 
+    public static int longestPalindrome4(String s) {
+        boolean[] map = new boolean[128];
+        int len = 0;
+        for (char c : s.toCharArray()) {
+            map[c] = !map[c];
+            if (!map[c]) len += 2;
+        }
+        if (len < s.length()) len++;
+        return len;
+    }
+
     public static void main(String[] args) {
 
         String string1 = "abccccdd";
@@ -95,5 +106,8 @@ public class LongestPalindrome309 {
         System.out.println(longestPalindrome3(string1));
         System.out.println(longestPalindrome3(string2));
         System.out.println(longestPalindrome3(string3));
+        System.out.println(longestPalindrome4(string1));
+        System.out.println(longestPalindrome4(string2));
+        System.out.println(longestPalindrome4(string3));
     }
 }
