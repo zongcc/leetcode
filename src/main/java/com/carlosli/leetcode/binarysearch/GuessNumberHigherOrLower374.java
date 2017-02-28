@@ -63,7 +63,7 @@ public class GuessNumberHigherOrLower374 {
 
 
 
-    /*---------------共用方法--------------*/
+    /*---------------提供的api--------------*/
 
     public static int guess(int guessNum) {
         int myKey = 5;
